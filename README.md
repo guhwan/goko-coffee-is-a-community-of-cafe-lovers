@@ -8,7 +8,7 @@ node: v16.14.0
 sass: 1.54.6
 
 
-## 실행방법
+## run
 npm install  
 npm start  
 
