@@ -1,10 +1,11 @@
 <img src="./images/goko_logo1.png" alt="drawing" width="300"/>  
-# `goko coffee`
+
+# `goko coffee`  
 goko coffee is a community of cafe lovers  
 
-## 테스트 환경
+## dependency
 node: v16.14.0  
-sass: 1.54.6 (node-sass X)  
+sass: 1.54.6
 
 
 ## 실행방법
