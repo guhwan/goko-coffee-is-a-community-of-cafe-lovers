@@ -1,4 +1,4 @@
-<img src="./images/goko_logo.png" alt="drawing" width="300"/>  
+<img src="./images/goko_logo1.png" alt="drawing" width="300"/>  
 # `goko coffee`
 goko coffee is a community of cafe lovers  
 
