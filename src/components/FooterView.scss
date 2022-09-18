@@ -1,0 +1,71 @@
+@import '../commons.scss';
+
+$color: #9b9b9b;
+
+.footer__background {
+  background: $main-gray;
+  color: $color;
+}
+
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 65px;
+  font-size: 1.6rem;
+
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 65px;
+
+    .logo__area {
+      width: 30%;
+
+      .footer__logo {
+        font-size: 2rem;
+      }
+    }
+
+    .link__list {
+      width: 55%;
+
+      ul {
+        width: 50%;
+        float: left;
+        line-height: 1.5;
+      }
+    }
+
+    .sns a {
+      color: $color;
+      text-decoration: none;
+      padding: 0 10px;
+    }
+  }
+
+  .copyright {
+    border-top: 1px solid $color;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+
+    small {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .select-language {
+      span {
+        &:after {
+          content: '|';
+          padding: 10px 20px;
+        }
+
+        &:last-child:after {
+          content: '';
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

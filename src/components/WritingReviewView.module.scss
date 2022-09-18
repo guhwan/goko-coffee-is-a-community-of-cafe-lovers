@@ -1,0 +1,169 @@
+@import '../commons.scss';
+
+.WritingReviewPage {
+  font-size: 1.6rem;
+  width: 773px;
+  margin: 130px auto 0;
+  .ReviewWritingPage__Row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 51px;
+    transform: translateY(-45%);
+
+    .RestaurantSubMessage {
+      line-height: 1.5;
+      font-size: 2rem;
+      .RestaurantName {
+        font-size: 2.6rem;
+        color: $main-color;
+      }
+    }
+    .RestaurantRecommendPicker {
+      .RestaurantRecommendPicker__List {
+        display: flex;
+        .RestaurantRecommendPicker__Item {
+          width: 50px;
+          height: 50px;
+          margin-right: 62px;
+          cursor: pointer;
+
+          button {
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            padding-top: 100%;
+            color: #cbcbcb;
+            margin-bottom: 1rem;
+          }
+          img {
+            margin-bottom: 1rem;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .ReviewWritingPage__ContentWrap {
+    display: flex;
+    justify-content: space-between;
+    .UserSimpleProfile {
+      img {
+        border-radius: 50%;
+        display: block;
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 5px;
+        background: pink;
+      }
+      .username {
+        display: block;
+        max-width: 70px;
+        font-size: 13px;
+        text-align: center;
+        word-break: break-all;
+        color: #555;
+      }
+    }
+    .ReviewWritingPage__FormWrap {
+      width: 678px;
+      .ReviewWritingPage__EditorWrap {
+        margin-bottom: 51px;
+        textarea {
+          width: 100%;
+          height: 150px;
+          padding: 12px 15px 30px 15px;
+          border: 1px solid #dbdbdb;
+          border-radius: 3px;
+          box-sizing: border-box;
+          font-size: 16px;
+          color: #000000;
+          resize: none;
+        }
+        .ReviewEditor__TextLengthStateBox {
+          text-align: right;
+          font-size: 1.2rem;
+          color: #7f7f7f;
+          transform: translateY(10px);
+        }
+      }
+      .DraggablePictureContainer {
+        margin-bottom: 41px;
+        position: relative;
+
+        & img {
+          width: 89px;
+          height: 89px;
+          margin-left: 10px;
+          transform: translateY(15px);
+          cursor: pointer;
+        }
+
+        & p {
+          display: none;
+          position: absolute;
+          transform: translate(-540%, 300%);
+        }
+
+        .DraggablePictureContainer__PictureList {
+          width: 89px;
+          height: 89px;
+          line-height: 70px;
+          text-align: center;
+          border: 1px dashed #dbdbdb;
+          cursor: pointer;
+          color: #7f7f7f;
+          opacity: 0.5;
+          font-size: 7rem;
+          font-weight: 50;
+          outline: none;
+        }
+      }
+    }
+  }
+  .ReviewWritingPage__Buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    .ReviewWritingPage__CancelButton {
+      min-width: 140px;
+      min-height: 50px;
+      margin-right: 34px;
+      border: 1px solid #cbcbcb;
+      border-radius: 50px;
+      font-size: 16px;
+      color: #7f7f7f;
+      text-align: center;
+      background-color: #ffffff;
+      outline: none;
+      cursor: pointer;
+    }
+    .ReviewWritingPage__SubmitButton_Active {
+      position: relative;
+      min-width: 140px;
+      min-height: 50px;
+      border: 1px solid #ff7100;
+
+      border-radius: 50px;
+      font-size: 16px;
+      color: #ffffff;
+      text-align: center;
+      background-color: #ff7100;
+      cursor: pointer;
+    }
+    .ReviewWritingPage__SubmitButton_InActive {
+      position: relative;
+      min-width: 140px;
+      min-height: 50px;
+      border: 1px solid #e9e9e9;
+
+      border-radius: 50px;
+      font-size: 16px;
+      color: #ffffff;
+      text-align: center;
+      background-color: #e9e9e9;
+    }
+  }
+}

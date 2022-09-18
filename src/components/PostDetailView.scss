@@ -1,0 +1,264 @@
+@import '../commons.scss';
+
+.photo-list {
+  width: 100%;
+  height: 340px;
+  font-size: $fontsize;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+
+  .photo-item {
+    position: relative;
+    width: 25%;
+    height: 340px;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 10px);
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  .no-photo-item {
+    width: 100%;
+    height: 100%;
+    background-image: url('../commonimgs/defaultListItem.jpg');
+    background-repeat: repeat-x;
+    background-size: contain;
+
+    .no-photo-msg {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .6);
+      font-size: 2.1rem;
+      color: #fff;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+
+  .modal-main {
+    position: fixed;
+    padding: 20px;
+    background: $color-black;
+    width: 80%;
+    height: 85%;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+
+    & .picCommentContainer {
+      background: $color-black;
+      display: inline-block;
+
+      & img {
+        height: 100%;
+        width: 70%;
+        transform: translateX(-40%);
+      }
+
+      & .commentBox {
+        background: $color-white;
+
+        & p {
+          color: $color-black;
+        }
+      }
+    }
+
+    & button {
+      color: $color-white;
+    }
+  }
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.detail-inner {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+
+  .restaurant-detail {
+    width: 800px;
+    padding: 0 15px;
+    margin: 50px auto 0;
+    font-size: 1.6rem;
+    color: #3e3e3e;
+
+    header {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ececec;
+
+      .titleWrap {
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $main-margin;
+
+        .title {
+          font-size: 2.6rem;
+          color: #090909;
+        }
+
+        .restaurants_action_button_wrap {
+          display: flex;
+
+          button {
+            width: 55px;
+            height: 42px;
+            font-size: 1.3rem;
+          }
+
+          .review_writing_button {
+            background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/web/resources/review_writing_icon.png');
+            background-size: 32px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 19px;
+            padding-top: 38px;
+            color: #9b9b9b;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+              background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/web/resources/review_writing_active_icon.png');
+              background-size: 32px;
+              color: $main-color;
+            }
+          }
+
+          .wannaGoOff {
+            cursor: pointer;
+            width: 32px;
+            height: 37px;
+            background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/web/resources/review_writing_active_icon.png');
+            background-position: -935px -579px;
+            position: relative;
+            outline: none;
+
+            span {
+              color: #9b9b9b;
+              position: absolute;
+              left: -10px;
+              bottom: -20px;
+              width: 52px;
+            }
+          }
+
+          .wannaGoOn {
+            cursor: pointer;
+            width: 32px;
+            height: 37px;
+            background-image: url('https://mp-seoul-image-production-s3.mangoplate.com/web/resources/review_writing_active_icon.png');
+            background-position: -933px -653px;
+            position: relative;
+            animation: wannago 500ms;
+            outline: none;
+          }
+
+          @keyframes wannago {
+            0% {
+              transform: scale(0.9);
+            }
+
+            65% {
+              transform: scale(1.2);
+            }
+
+            100% {
+              transform: scale(1);
+            }
+          }
+
+          span {
+            position: absolute;
+            left: -10px;
+            bottom: -20px;
+            width: 52px;
+            color: $main-color;
+          }
+        }
+      }
+
+      .rate {
+        font-size: 1.8rem;
+        margin-left: 1rem;
+        color: $main-color;
+      }
+    }
+
+    .status {
+      width: 60%;
+      display: flex;
+
+      span {
+        min-width: 80px;
+      }
+    }
+  }
+
+  .detail-list {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.7;
+    padding: 20px 0;
+
+    dt {
+      width: 30%;
+    }
+
+    dd {
+      width: 70%;
+    }
+
+    .address {
+      @include mobile {
+        width: 100%;
+        padding: 22px 40px 22px 14px;
+        border: 1px solid #e9e9e9;
+      }
+    }
+
+    .addressName {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.map {
+  position: relative;
+  width: 400px;
+  height: 400px;
+
+  @include deleteMap {
+    display: none;
+  }
+}

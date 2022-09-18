@@ -1,0 +1,108 @@
+@import '../commons.scss';
+
+.eatDealPage {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+
+  .list {
+    width: 768px;
+    margin: 0 auto;
+    background-color: #fff;
+
+    .item {
+      width: 100%;
+      height: auto;
+
+      .figure {
+        .imageWrapper {
+          position: relative;
+          max-height: 300px;
+          overflow: hidden;
+          width: 100%;
+
+          .image {
+            width: 100%;
+            object-fit: cover;
+          }
+
+          .imageInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            min-height: 70px;
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 15px;
+            background-image: linear-gradient(
+              to bottom,
+              transparent,
+              rgba(0, 0, 0, 0.4)
+            );
+
+            .leftInfo {
+              display: inline-flex;
+              align-items: center;
+              font-size: 1.5rem;
+              font-weight: 600;
+              color: #fff;
+              padding: 0 8px 0 15px;
+              height: 24px;
+              background-color: #14cbb2;
+              border-radius: 0 4px 4px 0;
+            }
+
+            .rightInfo {
+              display: flex;
+              flex-direction: column;
+              color: #fff;
+              margin-right: 15px;
+              text-align: right;
+
+              .originPrice {
+                font-size: 1.2rem;
+                line-height: 1.2;
+                text-decoration: line-through;
+              }
+
+              .salePrice {
+                line-height: 1.5;
+                font-size: 2rem;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          padding: 12px 15px 32px;
+
+          .restaurantName {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4f4f4f;
+            margin-bottom: 12px;
+          }
+
+          .title {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #7f7f7f;
+            margin-bottom: 8px;
+          }
+
+          .caution {
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1.2rem;
+            color: #7f7f7f;
+            background-color: #f3f3f3;
+          }
+        }
+      }
+    }
+  }
+}

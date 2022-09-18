@@ -1,0 +1,23 @@
+@import '../../commons.scss';
+
+@include desktop {
+  .searchView {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .googleMapWrapper {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 400px;
+      background-color: #f6f6f6;
+
+      .googleMapInnerWrapper {
+        position: relative;
+        height: 400px;
+      }
+    }
+  }
+}

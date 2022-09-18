@@ -1,0 +1,24 @@
+@import '../../commons.scss';
+
+// mobile vertical, mobile horizontal, tablet device
+.mapSection {
+  display: none;
+}
+
+.loadingIndicator {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// desktop(or laptop) device
+@include desktop {
+  .mapSection {
+    position: absolute;
+    display: block;
+    width: 400px;
+  }
+}

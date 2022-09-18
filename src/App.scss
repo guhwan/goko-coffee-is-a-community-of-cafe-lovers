@@ -1,0 +1,30 @@
+/************************************ Primary ************************************/
+@import './commons.scss';
+
+.App {
+  min-height: 100vh;
+}
+
+@include mobileVertical {
+  .App {
+    padding-top: 50px;
+  }
+}
+
+@include mobileHorizontal {
+  .App {
+    padding-top: 50px;
+  }
+}
+
+@include tablet {
+  .App {
+    padding-top: 60px;
+  }
+}
+
+@include desktop {
+  .App {
+    padding-top: 60px;
+  }
+}

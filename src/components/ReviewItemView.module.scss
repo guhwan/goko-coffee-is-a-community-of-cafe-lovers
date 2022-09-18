@@ -1,0 +1,139 @@
+@import '../commons.scss';
+
+.reveiw-content {
+  border-bottom: 1px solid #dbdbdb;
+
+  &:hover {
+    background: #f6f6f6;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  padding: 54px 1% 52px;
+  min-height: 74px;
+
+  @include mobile {
+    font-size: 1.4rem;
+  }
+
+  figure {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    .user-thumb {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: pink;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    figcaption {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .review-wrapper {
+    position: relative;
+    line-height: 2;
+    min-width: 75%;
+    margin: 0 20px;
+
+    .date {
+      position: absolute;
+      top: -20px;
+      color: #9b9b9b;
+      font-size: 1.3rem;
+    }
+  }
+
+  .list-thumb-photos {
+    width: 100%;
+    display: flex;
+    margin-top: 12px;
+
+    .button-thumb {
+      width: 120px;
+      height: 120px;
+      background: pink;
+      margin-right: 10px;
+
+      @include mobile {
+        display: block;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        margin-right: 5px;
+        height: 44px;
+        width: 44px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.icon-rating {
+  display: block;
+  text-align: center;
+
+  .good {
+    color: $main-color;
+    font-weight: normal;
+    font-size: 1.5rem;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 44px;
+      background-image: url('../commonimgs/mangoplate_sprites_desktop.png');
+      background-position: -713px -866px;
+    }
+  }
+
+  .ok {
+    color: $main-color;
+    font-weight: normal;
+    font-size: 1.5rem;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 44px;
+      background-image: url('../commonimgs/mangoplate_sprites_desktop.png');
+      background-position: -563px -866px;
+    }
+  }
+
+  .bad {
+    color: $main-color;
+    font-weight: normal;
+    font-size: 1.5rem;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 44px;
+      background-image: url('../commonimgs/mangoplate_sprites_desktop.png');
+      background-position: -513px -866px;
+    }
+  }
+}

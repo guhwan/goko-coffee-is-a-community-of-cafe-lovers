@@ -1,0 +1,51 @@
+@import '../../commons.scss';
+
+.blackOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.galleryModal {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 90%;
+  border-radius: 5px;
+  background-color: #000;
+  z-index: 200;
+
+  .carouselWrapper {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    padding: 0 50px;
+    border-radius: 5px 0 0 5px;
+    z-index: 100;
+  }
+}
+
+.closeBtn {
+  background-image: url('../../commonimgs/mangoplate_sprites_mobile.png');
+  background-position: -28px -587px;
+  position: fixed;
+  top: 3%;
+  right: 8%;
+  width: 20px;
+  height: 20px;
+  z-index: 200;
+  cursor: pointer;
+  outline: none;
+  /* Hide Text */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

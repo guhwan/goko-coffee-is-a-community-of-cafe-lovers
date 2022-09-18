@@ -1,0 +1,146 @@
+@import '../commons.scss';
+
+.blackOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+}
+
+.myPage {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  width: 320px;
+  height: 60%;
+  min-height: 250px;
+  max-height: 450px;
+  background-color: #fff;
+  color: #fff;
+  margin: 0px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+
+  &.arrowTop {
+    margin-top: 40px;
+  }
+
+  &.arrowTop::before {
+    content: ' ';
+    position: absolute;
+    right: 15px;
+    top: -11px;
+    border-top: none;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-bottom: 12px solid #fff;
+  }
+
+  .myPageWrapper {
+    .tapWrapper {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+
+      .tap {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        font-size: 1.6rem;
+        color: #9b9b9b;
+        cursor: pointer;
+        outline: none;
+        border-bottom: 1px solid #dbdbdb;
+
+        &.active {
+          color: $main-color;
+          border-bottom: 3px solid $main-color;
+        }
+      }
+    }
+
+    .list {
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 100px);
+      color: #000;
+      overflow-y: auto;
+      border-bottom: 1px solid #dbdbdb;
+      display: flex;
+      flex-direction: column;
+      padding: 5px 0;
+
+      .recentResetBtn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: #dbdbdb;
+        padding-right: 10px;
+        font-size: 1.2rem;
+        width: 100%;
+        min-height: 20px;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      .recentView {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .buttonList {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+
+      .btn {
+        display: block;
+        width: 110px;
+        height: 40px;
+        font-size: 1.6rem;
+        color: #9b9b9b;
+        border: 3px solid #9b9b9b;
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          color: $main-color;
+          border-color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+@include mobileVertical {
+  .myPage {
+    right: 0;
+  }
+}

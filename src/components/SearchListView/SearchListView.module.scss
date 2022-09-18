@@ -1,0 +1,338 @@
+/* media query width */
+/* 
+  mobile-vertical: max-width 480px
+  mobile-horizontal: max-width 767px
+  tablet: max-width 1024px
+  desktop: min-width 1025px
+*/
+
+@import '../../commons.scss';
+
+// mobile device vertical mode (max-width: 480px)
+.outerSection {
+  width: 100%;
+  padding: 0 0 30px 0;
+
+  .innerSection {
+    width: 100%;
+    padding: 30px 10px;
+
+    .listInfo {
+      padding: 0 5px;
+      display: flex;
+      justify-content: space-between;
+
+      .listTitle {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $main-color;
+      }
+
+      .listFilter::before {
+        content: '';
+        margin: -2px 12px 0 0;
+        background-image: url(../../commonimgs/mangoplate_sprites_desktop.png);
+        background-position: -974px -304px;
+        width: 23px;
+        height: 22px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .listFilter {
+        font-size: 1.8rem;
+        color: #9b9b9b;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+
+    .listSection {
+      margin-top: 20px;
+
+      .listRestaurants {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .listItem {
+          width: calc(50% - 10px);
+          height: auto;
+          margin-bottom: 10px;
+
+          .itemFigure {
+            width: 100%;
+            height: calc(100% - 65px);
+
+            .thumbWrapper {
+              width: 100%;
+              height: 100%;
+
+              .thumbLink {
+                .thumbImage {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+
+          .info {
+            width: 100%;
+            height: 65px;
+            padding: 7px 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            .name {
+              display: inline-block;
+              font-size: 1.6rem;
+              font-weight: 500;
+              color: #555;
+            }
+
+            .score {
+              font-size: 1.6rem;
+              font-weight: 500;
+              color: $main-color;
+              margin-left: 7px;
+            }
+
+            .etcInfo {
+              margin-top: 7px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+
+              .location,
+              .type {
+                font-size: 1.3rem;
+                color: #9b9b9b;
+              }
+            }
+
+            .countInfo {
+              margin-top: 4px;
+
+              .viewCount::before {
+                content: '';
+                display: inline-block;
+                margin-right: 3px;
+                background-image: url(../../commonimgs/mangoplate_sprites_mobile.png);
+                background-position: -618px -477px;
+                width: 13px;
+                height: 9px;
+              }
+
+              .reviewCount::before {
+                content: '';
+                display: inline-block;
+                margin-right: 2px;
+                margin-left: 8px;
+                background-image: url(../../commonimgs/mangoplate_sprites_mobile.png);
+                background-position: -618px -558px;
+                width: 9px;
+                height: 9px;
+              }
+
+              .viewCount,
+              .reviewCount {
+                font-size: 1.1rem;
+                color: #9b9b9b;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .btnPaginate {
+        display: inline-block;
+        margin-right: 10px;
+        width: 46px;
+        height: 46px;
+        line-height: 42px;
+        font-size: 1.8rem;
+        color: #cbcbcb;
+        text-align: center;
+        border: 2px solid #cbcbcb;
+        border-radius: 50%;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// mobile device horizontal mode (481px to 767px)
+@include mobileHorizontal {
+  .outerSection {
+    width: 100%;
+
+    .innerSection {
+      width: 100%;
+      padding: 30px 20px;
+
+      .listInfo {
+        padding: 0 10px;
+
+        .listTitle {
+          font-size: 2.1rem;
+        }
+      }
+
+      .listSection {
+        .listRestaurants {
+          .listItem {
+
+            .info {
+              .name {
+                font-size: 1.8rem;
+              }
+
+              .score {
+                font-size: 1.8rem;
+              }
+
+              .etcInfo {
+                margin-top: 7px;
+
+                .location,
+                .type {
+                  font-size: 1.4rem;
+                  color: #9b9b9b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// tablet device (768px to 1023px)
+@include tablet {
+  .outerSection {
+    width: 100%;
+
+    .innerSection {
+      width: 100%;
+      padding: 30px 50px;
+
+      .listInfo {
+        padding: 0 15px;
+
+        .listTitle {
+          font-size: 2.2rem;
+        }
+      }
+
+      .listSection {
+        .listRestaurants {
+          .listItem {
+            height: 100%;
+            padding-bottom: 15px;
+
+            .itemFigure {
+              .thumbWrapper {
+                .thumbLink {
+                  .thumbImage {
+                    height: 300px;
+                  }
+                }
+              }
+            }
+
+            .info {
+              .name {
+                font-size: 2rem;
+              }
+
+              .score {
+                font-size: 2rem;
+              }
+
+              .etcInfo {
+                margin-top: 9px;
+
+                .location,
+                .type {
+                  font-size: 1.4rem;
+                  color: #9b9b9b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// desktop(or laptop) device (1024px +)
+@include desktop {
+  .outerSection {
+    width: calc(100% - 400px);
+    min-width: 900px;
+
+    .innerSection {
+      width: 100%;
+      padding: 30px 100px;
+
+      .listInfo {
+        padding: 0 15px;
+
+        .listTitle {
+          font-size: 2.3rem;
+        }
+      }
+
+      .listSection {
+        .listRestaurants {
+          .listItem {
+            height: 100%;
+            padding-bottom: 20px;
+
+            .itemFigure {
+              .thumbWrapper {
+                .thumbLink {
+                  .thumbImage {
+                    height: 240px;
+                  }
+                }
+              }
+            }
+
+            .info {
+              .name {
+                font-size: 2.1rem;
+              }
+
+              .score {
+                font-size: 2.1rem;
+              }
+
+              .etcInfo {
+                margin-top: 9px;
+
+                .location,
+                .type {
+                  font-size: 1.4rem;
+                  color: #9b9b9b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

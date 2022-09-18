@@ -1,0 +1,21 @@
+<svg width="100px" height="93px" xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="clip0">
+<rect x="329" y="302" width="100px" height="95"/></clipPath><clipPath id="clip1">
+<rect x="630" y="303" width="194" height="94"/></clipPath><clipPath id="clip2">
+<rect x="630" y="303" width="195" height="94"/></clipPath></defs>
+<g clip-path="url(#clip0)" transform="translate(-629 -302)">
+<g clip-path="url(#clip1)"><g clip-path="url(#clip2)">
+<text fill="#AB7942" fill-opacity="1" font-family="BM YEONSUNG OTF,BM YEONSUNG OTF_MSFontService,sans-serif" 
+font-style="normal" font-variant="normal" font-weight="700" font-stretch="normal" font-size="74"
+ text-anchor="start" direction="ltr" writing-mode="lr-tb" unicode-bidi="normal" text-decoration="none"
+  transform="matrix(0.998949 0 0 0.689467 637.197 336)">GOKO
+  <tspan fill="#AB7942" fill-opacity="1"
+   font-family="BM YEONSUNG OTF,BM YEONSUNG OTF_MSFontService,sans-serif" font-style="normal"
+    font-variant="normal" font-weight="700" font-stretch="normal" font-size="64" text-anchor="start"
+     direction="ltr" writing-mode="lr-tb" unicode-bidi="normal" text-decoration="none" x="0" y="15.4206">Coffee
+</tspan>
+</text>
+</g>
+</g>
+</g>
+</svg>

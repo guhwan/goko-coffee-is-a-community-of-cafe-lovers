@@ -1,0 +1,52 @@
+// 변수
+$color-white: #fff;
+$color-black: #181818;
+$size-basic: 320px;
+$size-normal: 768px;
+$size-big: 855px;
+$main-color: #645551;
+$main-gray: rgb(62, 62, 62);
+$sub-gray: #e9e9e9;
+$fontsize: 1.6rem; // 1rem === 10px입니다.
+$main-margin: 13px;
+
+// 믹스인
+@mixin center {
+  transform: translate(-50%, -50%);
+}
+
+@mixin mobileVertical {
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobileHorizontal {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin deleteMap {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}

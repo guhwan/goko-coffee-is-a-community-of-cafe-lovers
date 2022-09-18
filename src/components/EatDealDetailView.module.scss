@@ -1,0 +1,158 @@
+@import '../commons.scss';
+
+a {
+  text-decoration: none;
+}
+
+.eatDealPage {
+  width: 768px;
+  margin: 0 auto;
+  min-height: 100vh;
+  color: #4f4f4f;
+
+  .figure {
+    .imageWrapper {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+      width: 100%;
+
+      .image {
+        width: 100%;
+      }
+
+      .imageInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        min-height: 70px;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 15px;
+        background-image: linear-gradient(to bottom,
+          transparent,
+          rgba(0, 0, 0, 0.4));
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding: 12px 15px 32px;
+      border-bottom: 1px solid #cdcdcd;
+
+      .Reviewbutton {
+        display: inline-block;
+        width: 115px;
+        font-size: 1.4rem;
+        margin-top: 5px;
+        padding: 8px;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        letter-spacing: 0;
+        color: #7f7f7f;
+        background-color: #f3f3f3;
+      }
+
+      .restaurantName {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #4f4f4f;
+        margin-bottom: 12px;
+        margin-top: 20px;
+      }
+
+      .title {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #7f7f7f;
+        padding-bottom: 13px;
+        margin-top: 24px;
+      }
+
+      .date {
+        border-radius: 5px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #4f4f4f;
+      }
+
+      .PriceInfo {
+        color: #393939;
+        margin-right: 15px;
+        text-align: right;
+
+        .saleRate {
+          margin-right: 10px;
+          color: #14cbb2;
+          font-size: 2rem;
+          font-weight: bold;
+          position: relative;
+        }
+
+        .Info {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #4f4f4f;
+
+          height: 24px;
+          border-radius: 0 4px 4px 0;
+        }
+
+        .originPrice {
+          font-size: 1.2rem;
+          line-height: 1.2;
+          text-decoration: line-through;
+          color: #cbcbcb;
+        }
+
+        .salePrice {
+          line-height: 1.5;
+          font-size: 2rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .introduce-section {
+    margin-bottom: 40px;
+    color: #4f4f4f;
+
+    .introduce-text {
+      font-size: 1.8rem;
+      margin-top: 25px;
+      color: #4f4f4f;
+    }
+
+    padding-left: 13px;
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 13px;
+      font-weight: bold;
+    }
+
+    ul {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #7f7f7f;
+    }
+  }
+}
+
+.action-button {
+  background: $main-color;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  bottom: 0;
+  max-width: 768px;
+  left: 50%;
+  font-size: 1.6rem;
+  color: #fff;
+  transform: translateX(-50%);
+}

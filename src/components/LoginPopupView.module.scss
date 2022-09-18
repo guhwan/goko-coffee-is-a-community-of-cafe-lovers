@@ -1,0 +1,252 @@
+@import '../commons.scss';
+
+// common css
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-image: url(../commonimgs/mangoplate_sprites_desktop.png);
+  background-position: -935px -693px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+  /* Hide the text. */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@include mobileVertical {
+  .blackOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 300;
+    overflow: hidden;
+  }
+
+  .popup {
+    display: none;
+  }
+
+  .loginPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: 320px;
+    padding: 100px 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 400;
+
+    .title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      color: #555;
+      text-align: center;
+    }
+
+    .loginFacebook {
+      position: relative;
+      display: block;
+      color: #fff;
+      background-color: #4150bf;
+      width: 220px;
+      height: 50px;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      outline: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../commonimgs/mangoplate_sprites_desktop.png);
+        background-position: -974px -615px;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        margin-left: 25px;
+      }
+
+      .btnTitle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        margin-left: 50px;
+        padding-left: 10px;
+      }
+    }
+
+    .loginKakao {
+      position: relative;
+      display: block;
+      color: #66514c;
+      background-color: #ffe809;
+      width: 220px;
+      height: 50px;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      cursor: pointer;
+      outline: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../commonimgs/mangoplate_sprites_desktop.png);
+        background-position: -974px -641px;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        margin-left: 25px;
+      }
+
+      .btnTitle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 1px solid rgba(68, 53, 53, 0.3);
+        margin-left: 50px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+// upper mobile landscape
+@media screen and (min-width: 481px) {
+  .blackOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 300;
+    overflow: hidden;
+  }
+
+  .popup {
+    display: none;
+  }
+
+  .loginPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    padding: 100px 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 400;
+
+    .title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      margin-bottom: 30px;
+      font-size: 1.6rem;
+      line-height: 1.3;
+      color: #555;
+      text-align: center;
+    }
+
+    .loginFacebook {
+      position: relative;
+      display: block;
+      color: #fff;
+      background-color: #4150bf;
+      width: 250px;
+      height: 50px;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      outline: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../commonimgs/mangoplate_sprites_desktop.png);
+        background-position: -974px -615px;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        margin-left: 20px;
+      }
+
+      .btnTitle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        margin-left: 25px;
+        padding-left: 10px;
+        margin-left: 50px;
+        padding-left: 15px;
+      }
+    }
+
+    .loginKakao {
+      position: relative;
+      display: block;
+      color: #66514c;
+      background-color: #ffe809;
+      width: 250px;
+      height: 50px;
+      font-size: 1.4rem;
+      border-radius: 50px;
+      cursor: pointer;
+      outline: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../commonimgs/mangoplate_sprites_desktop.png);
+        background-position: -974px -641px;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        margin-left: 20px;
+      }
+
+      .btnTitle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 1px solid rgba(68, 53, 53, 0.3);
+        margin-left: 50px;
+        padding-left: 15px;
+      }
+    }
+  }
+}

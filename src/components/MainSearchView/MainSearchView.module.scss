@@ -1,0 +1,162 @@
+@import '../../commons.scss';
+
+/* Main Page Search Box */
+.mainSearch {
+  background: $color-white;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-top: 2rem;
+  width: 74rem;
+  height: 5.5rem;
+  border-radius: 25px;
+  border: 2px solid $main-color;
+  font-size: 2rem;
+
+  &.hide {
+    display: none;
+  }
+
+  @media all and (min-width: $size-basic) and (max-width: $size-normal) {
+    width: 40rem;
+  }
+
+  @include center;
+
+  & legend {
+    position: absolute;
+    /*제목 숨기기*/
+    width: 1px;
+    /*초점을 받기위해 최소한의 크기사용*/
+    height: 1px;
+    /*초점을 받기위해 최소한의 크기사용*/
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .magnifyIcon {
+    background-image: url('../../commonimgs/mangoplate_sprites_desktop.png');
+    background-position: -974px -159px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    line-height: 6.4rem;
+    position: absolute;
+    left: 2.3rem;
+    top: 1.3rem;
+
+    @media all and (min-width: $size-basic) and (max-width: $size-normal) {
+      left: 2rem;
+    }
+  }
+
+  & input {
+    width: 34rem;
+    margin-top: 1px;
+    height: calc(100% - 2px);
+    margin-left: 3rem;
+    position: absolute;
+    left: 5rem;
+    outline: none;
+    font-size: 1.7rem;
+
+    @media all and (min-width: $size-basic) and (max-width: $size-normal) {
+      width: 17rem;
+      left: 4rem;
+    }
+  }
+
+  // input의 자동완성 배경색상 변화 방지
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  & button {
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+    width: 15rem;
+    border-radius: 25px;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 20px;
+    background: $main-color;
+    color: $color-white;
+    position: absolute;
+    right: 0rem;
+  }
+}
+
+/* Not Main Page Search Box */
+.searchBox {
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 145px);
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+
+  & fieldset legend {
+    position: absolute;
+    /*제목 숨기기*/
+    width: 1px;
+    /*초점을 받기위해 최소한의 크기사용*/
+    height: 1px;
+    /*초점을 받기위해 최소한의 크기사용*/
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  /* Main Page 에서는 searchBox 감춤 */
+  // &.hide {
+  //   display: none;
+  // }
+
+  .searchIcon {
+    position: absolute;
+    left: 5px;
+    background-image: url('../../commonimgs/mangoplate_sprites_desktop.png');
+    background-position: -974px -159px;
+    width: 25px;
+    height: 25px;
+  }
+
+  input[type='text'] {
+    width: 100%;
+    margin-left: 35px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    outline: none;
+    background: transparent;
+  }
+
+  .searchBtn {
+    display: none;
+  }
+}
+@include mobileVertical {
+  .searchBox {
+    position: absolute;
+    left: 150px;
+    width: calc(100% - 150px);
+  }
+}
+@include tablet {
+  .searchBox {
+    position: absolute;
+    left: 150px;
+    width: calc(100% - 245px);
+  }
+}
+
+@include desktop {
+  .searchBox {
+    position: absolute;
+    left: 150px;
+    width: calc(100% - 630px);
+  }
+}

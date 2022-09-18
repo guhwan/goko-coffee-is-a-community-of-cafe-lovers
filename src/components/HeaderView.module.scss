@@ -1,0 +1,275 @@
+@import '../commons.scss';
+$color: #555;
+
+// default setting (mobile vertical)
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  color: #555;
+  background: #fff;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+
+  &.transparent {
+    background: #fff;
+    box-shadow: 0 4px 11px rgba(0, 0, 0, 0);
+  }
+
+  .logoAndSearch {
+    display: flex;
+
+    .logo {
+      width: 300px;
+      height: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      .miniLogo {
+        // background-image: url('../commonimgs/logo_goko_mini.png');
+        // background-position: -491px -56px;
+        // width: 200px;
+        // height: 70px;
+        display: none;
+      }
+
+      .mainLogo{
+        padding-left: 20px;
+        width: 200px;
+        height: 70px;
+      }
+      .grayLogo {
+        display: none;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    height: 100%;
+
+    .navList {
+      display: inline-flex;
+      height: 100%;
+      align-items: center;
+
+      .navItem:nth-child(1),
+      .navItem:nth-child(2),
+      .navItem:nth-child(3) {
+        height: 100%;
+        display: none;
+      }
+
+      .navItem:nth-child(4),
+      .navItem:nth-child(5) {
+        height: 100%;
+        padding: 5px;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+
+        .hamburger {
+          background-image: url('../commonimgs/mangoplate_sprites_mobile.png');
+          background-position: -573px -430px;
+          width: 35px;
+          height: 35px;
+          cursor: pointer;
+          outline: none;
+          /* Hide the text. */
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        .myPage {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: transparent;
+          background-image: url('../commonimgs/mangoplate_sprites_desktop.png');
+          background-position: -82px -919px;
+          width: 35px;
+          height: 35px;
+          cursor: pointer;
+          outline: none;
+          /* Hide the text. */
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+
+          &.logined {
+            border: 2px solid $main-color;
+            background-position: center;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobileVertical {
+  .header {
+    height: 60px;
+
+    &.transparent {
+      background: #fff;
+      box-shadow: 0 4px 11px rgba(0, 0, 0, 0);
+    }
+
+    .logoAndSearch {
+      .logo {
+        width: 150px;
+
+        .miniLogo {
+          // background-image: url('../commonimgs/logo_goko_mini.png');
+          // background-position: -491px -56px;
+          // width: 200px;
+          // height: 70px;
+          display: none;
+        }
+        .grayLogo {
+          display: none;
+        }
+        .mainLogo {
+          display: inline-block;
+        }
+      }
+
+      .searchBox {
+        position: absolute;
+        left: 150px;
+        width: calc(100% - 145px);
+      }
+    }
+  }
+}
+
+@include mobileHorizontal {}
+
+@include tablet {
+  .header {
+    height: 60px;
+
+    &.transparent {
+      background: #fff;
+      box-shadow: 0 4px 11px rgba(0, 0, 0, 0);
+    }
+
+    .logoAndSearch {
+      .logo {
+        width: 150px;
+
+        .miniLogo {
+          // background-image: url('../commonimgs/logo_goko_mini.png');
+          // background-position: -491px -56px;
+          // // src: url('../commonimgs/logo_goko_midle.svg');
+          // width: 10px;
+          // height: 30px;
+          display: none;
+        }
+        .grayLogo {
+          display: none;
+
+        }
+        .mainLogo {
+          
+          display: inline-block;
+        }
+
+        // .miniLogo.appear,
+        // .mainLogo.hide {
+        //   display: inline-block;
+        // }
+      }
+
+      .searchBox {
+        position: absolute;
+        left: 150px;
+        width: calc(100% - 245px);
+      }
+    }
+  }
+}
+
+@include desktop {
+  .header {
+    height: 60px;
+
+    &.transparent {
+      background: transparent;
+      box-shadow: 0 4px 11px rgba(0, 0, 0, 0);
+    }
+
+    .logoAndSearch {
+      .logo {
+        width: 150px;
+
+        .miniLogo {
+          display: none;
+        }
+        .grayLogo {
+          display: none;
+        }
+        .mainLogo {
+          display: inline-block;
+        }
+
+        // .mainLogo.appear,
+        // .grayLogo.hide {
+        //   display: inline-block;
+        // }
+      }
+
+      .searchBox {
+        position: absolute;
+        left: 150px;
+        width: calc(100% - 630px);
+      }
+    }
+
+    .nav {
+      .navList {
+
+        .navItem:nth-child(1),
+        .navItem:nth-child(2),
+        .navItem:nth-child(3) {
+          width: 130px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 1.6rem;
+          color: #888;
+          border-left: 1px solid #dbdbdb;
+          cursor: pointer;
+          outline: none;
+          text-decoration: none;
+
+          &.white {
+            border: 0;
+            color: #fff;
+          }
+        }
+
+        .navItem:nth-child(4) {
+          display: none;
+        }
+
+        .navItem:nth-child(5) {
+          width: 85px;
+          border-left: 1px solid #dbdbdb;
+          display: inline-flex;
+          justify-content: center;
+
+          &.white {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}
