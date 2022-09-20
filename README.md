@@ -2,11 +2,14 @@
 
 # `goko coffee`  
 goko coffee is a community of cafe lovers  
+this is a front-end on reactjs
 
-## dependency
-node: v16.14.0  
-sass: 1.54.6
-
+## mainly dependency  
+| no.|library|dependency|  
+|---|---|---|  
+|1|react|v16.6.3|  
+|2|sass|v1.54.6|  
+|3|axios|v0.18.0|  
 
 ## run
 npm install  
