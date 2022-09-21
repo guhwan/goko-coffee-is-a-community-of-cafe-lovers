@@ -4,6 +4,12 @@
 goko coffee is a community of cafe lovers  
 this is a front-end on reactjs
 
+## snap shots  
+<img src="./images/goko_main.png" alt="drawing" width="600"/>  
+<img src="./images/goko_search.png" alt="drawing" width="600"/>  
+<img src="./images/goko_pick.png" alt="drawing" width="600"/>  
+<img src="./images/goko_pick_detail.png" alt="drawing" width="600"/>  
+
 ## mainly dependency  
 | no.|library|dependency|  
 |---|---|---|  
