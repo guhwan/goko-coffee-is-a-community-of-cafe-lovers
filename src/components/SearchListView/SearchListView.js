@@ -65,18 +65,9 @@ export default class SearchListView extends Component {
                                   <img
                                     className={cx('thumbImage')}
                                     src={
-                                      !r.imgUrl.map(item =>
-                                        item.find(
-                                          item => Object.keys(item).length > 1
-                                        )
-                                      )[0]
+                                      !r.imgUrl
                                         ? defaultListItem
-                                        : r.imgUrl.map(item =>
-                                            item.find(
-                                              item =>
-                                                Object.keys(item).length > 1
-                                            )
-                                          )[0].image
+                                        : r.imgUrl
                                     }
                                     alt={r.name}
                                   />

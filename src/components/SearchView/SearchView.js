@@ -8,24 +8,24 @@ import withLoading from '../../hoc/withLoading';
 const cx = classNames.bind(styles);
 
 class SearchView extends Component {
-  static defaultProps = {
-    // 서버로부터 받아온 레스토랑 목록 데이터
-    restaurants: [
-      {
-        // id:
-        // imgUrl:
-        // name:
-        // score:
-        // location:
-        // foodType:
-        // viewCount:
-        // reviewCount:
-        // wannagoCount:
-        // latitude:
-        // longitude:
-      },
-    ],
-  };
+  // static defaultProps = {
+  //   // 서버로부터 받아온 레스토랑 목록 데이터
+  //   restaurants: [
+  //     {
+  //       // id:
+  //       // imgUrl:
+  //       // name:
+  //       // score:
+  //       // location:
+  //       // foodType:
+  //       // viewCount:
+  //       // reviewCount:
+  //       // wannagoCount:
+  //       // latitude:
+  //       // longitude:
+  //     },
+  //   ],
+  // };
   render() {
     const { restaurants, ...rest } = this.props;
     // console.log(
@@ -52,7 +52,7 @@ class SearchView extends Component {
     // DB의 속성 이름을 내가 원하는 이름으로 바꾸기 위해 map을 돌려서 새로운 객체 속성에 값을 대입해준다.
     const restaurantList = restaurants.map(r => ({
       id: r.pk,
-      imgUrl: r.post_set.map(item => item.postimage_posts),
+      imgUrl: r.post_set,
       name: r.name,
       score: r.rate_average,
       location: r.address,
@@ -63,6 +63,7 @@ class SearchView extends Component {
       latitude: r.latitude,
       longitude: r.longitude,
     }));
+    console.log(restaurantList);
     return (
       <article className={cx('searchView')}>
         {/* 검색 결과 목록 출력 컴포넌트 */}

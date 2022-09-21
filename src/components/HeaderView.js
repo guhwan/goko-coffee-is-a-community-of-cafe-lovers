@@ -4,8 +4,8 @@ import styles from './HeaderView.module.scss';
 import { withUser } from '../contexts/UserContext';
 import { withPage } from '../contexts/PageContext';
 import { withModal } from '../contexts/ModalContext';
-import { ReactComponent as MiniLogo } from '../commonimgs/logo_goko_mini.svg';
-import { ReactComponent as GrayLogo } from '../commonimgs/logo_goko_midle.svg';
+// import { ReactComponent as MiniLogo } from '../commonimgs/logo_goko_mini.svg';
+// import { ReactComponent as GrayLogo } from '../commonimgs/logo_goko_midle.svg';
 import { ReactComponent as MainLogo } from '../commonimgs/logo_goko_full.svg';
 
 import { Link } from 'react-router-dom';
