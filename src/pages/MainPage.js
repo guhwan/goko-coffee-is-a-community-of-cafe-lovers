@@ -13,7 +13,7 @@ export default class MainPage extends Component {
       <React.Fragment>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>망고플레이트: 나만의 맛집 검색</title>
+          <title>고고커피: 나만의 카페 맛집 검색</title>
         </Helmet>
         <Main />
       </React.Fragment>

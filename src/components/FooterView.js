@@ -17,10 +17,10 @@ export default class FooterView extends Component {
             <div className="link__list">
               <ul>
                 <li>회사소개</li>
-                <li>망고플레이트 채용</li>
+                <li>고고커피 채용</li>
                 <li>투자 정보</li>
                 <li>브랜드 가이드라인</li>
-                <li>망고플레이트 비즈니스</li>
+                <li>고고커피 비즈니스</li>
                 <li>광고 문의</li>
               </ul>
               <ul>
@@ -42,13 +42,13 @@ export default class FooterView extends Component {
           </div>
           <div className="copyright">
             <small>
-              ㈜ 망고플레이트
+              ㈜ 고고커피
               <br />
-              서울특별시 강남구 도곡로7길 28, 3층 302호 (역삼동, 우정빌딩)
+              서울특별시 강남구 도곡로7길 28, 3층 11호 (역삼동, 우정빌딩)
               <br />
-              대표이사: 김대웅 사업자 등록번호: 211-88-92374 [사업자정보확인]
+              대표이사: 김구환 사업자 등록번호: 111-88-1111 [사업자정보확인]
               <br />
-              통신판매업 신고번호: 2014-서울강남-02615 고객센터: 02-565-5988
+              통신판매업 신고번호: 2014-서울강남-01111 고객센터: 02-565-5988
               <br />
               <span className="summery">
                 © 2018 MangoPlate Co., Ltd. All rights reserved.
